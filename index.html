@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gamboa General Construction | Remodelaciones en Pittsburgh, PA</title>
+<meta name="description" content="Remodelaciones de casas en Pittsburgh, PA y alrededores. Mira nuestros trabajos y agenda tu visita. Home remodeling in Pittsburgh, PA.">
+<meta name="theme-color" content="#0e0e10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bk:#0e0e10; --gr:#17171c; --gr2:#22232a; --line:#2f313b;
+  --am:#f29a0c; --am2:#ffb53d; --wh:#ffffff; --mut:#c3c6d0;
+  --ok:#3ddc97; --bad:#ff7b7b; --r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bk);color:var(--wh);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;padding-bottom:100px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--am2)}
+h1,h2,h3{font-family:"Space Grotesk",Inter,system-ui,sans-serif;line-height:1.1;margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+[hidden]{display:none !important}
+
+/* ---- Barra de progreso (XP) ---- */
+.xp{position:fixed;left:0;top:0;right:0;height:4px;background:rgba(255,255,255,.08);z-index:70}
+.xp i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--am),var(--am2));transition:width .15s linear}
+
+/* ---- Encabezado ---- */
+.top{position:sticky;top:0;z-index:60;background:rgba(14,14,16,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--wh);margin-right:auto}
+.logo-img{height:46px;width:auto;background:#fff;border-radius:10px;padding:3px}
+.wordmark{display:flex;flex-direction:column;line-height:1}
+.wordmark b{font:700 1.45rem "Space Grotesk",sans-serif;letter-spacing:.04em}
+.wordmark small{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--am);margin-top:4px}
+.links{display:flex;gap:6px}
+.links a{color:var(--mut);text-decoration:none;font-weight:600;padding:10px 12px;border-radius:10px;font-size:.95rem}
+.links a:hover{color:var(--wh);background:var(--gr2)}
+.lvl-badge{font:700 .78rem "Space Grotesk",sans-serif;letter-spacing:.08em;color:var(--am);border:1px solid var(--am);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.lang{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;min-width:46px;min-height:44px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--mut)}
+.lang button.on{background:var(--am);color:#111}
+.lang button:focus-visible{outline:3px solid var(--am2);outline-offset:-3px}
+.lang .sep{color:var(--line)}
+
+/* ---- Botones ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 26px;border-radius:14px;border:2px solid var(--am);background:var(--am);color:#111;font:700 1.05rem Inter,sans-serif;text-decoration:none;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{background:var(--am2);transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--wh);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--am);background:var(--gr2)}
+.btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.btn.wa{background:#0f7d43;border-color:#0f7d43;color:#fff}
+.btn.wa:hover{background:#13955103;background:#139651}
+
+/* ---- Portada ---- */
+.hero{position:relative;overflow:hidden;padding:52px 0 76px;background:
+  radial-gradient(900px 520px at 88% -10%,rgba(242,154,12,.30),transparent 60%),
+  linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/46px 46px,
+  linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/46px 46px,var(--bk)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.hero-grid.solo{grid-template-columns:1fr}
+.kicker{display:inline-block;color:var(--am);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;border-left:4px solid var(--am);padding-left:12px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.3rem,6.4vw,4.3rem);letter-spacing:-.02em}
+.hero p.sub{font-size:clamp(1.1rem,2.4vw,1.35rem);color:var(--mut);max-width:34em;margin:18px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.tags span{font-size:.9rem;color:var(--mut);border:1px solid var(--line);padding:6px 12px;border-radius:999px;background:rgba(23,23,28,.7)}
+.logo-card{background:#fff;border-radius:28px;padding:20px;box-shadow:0 30px 80px rgba(242,154,12,.25);transform:rotate(-2deg)}
+.logo-card img{width:100%;height:auto}
+
+/* ---- Secciones ---- */
+section{padding:76px 0}
+.sec-head{margin-bottom:30px;max-width:760px}
+.sec-head h2{font-size:clamp(1.9rem,4.6vw,3rem);letter-spacing:-.01em}
+.sec-head p{color:var(--mut);margin:12px 0 0;font-size:1.1rem}
+.alt{background:var(--gr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* ---- Galeria ---- */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.chip{all:unset;cursor:pointer;min-height:46px;padding:0 18px;display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;color:var(--mut);font-weight:600;background:var(--gr)}
+.chip:hover{border-color:var(--am);color:var(--wh)}
+.chip.on{background:var(--am);border-color:var(--am);color:#111}
+.chip:focus-visible{outline:3px solid var(--am2);outline-offset:2px}
+.seen{color:var(--mut);font-size:.95rem;margin:0 0 18px;min-height:1.5em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{position:relative;aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:var(--gr2);border:1px solid var(--line);cursor:pointer;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-5px);border-color:var(--am)}
+.card:focus-visible{outline:3px solid var(--am2);outline-offset:3px}
+.media,.vbox{position:absolute;inset:0}
+.media img,.vbox iframe{width:100%;height:100%;object-fit:cover;border:0}
+.vbox iframe{pointer-events:none}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:16px;background:linear-gradient(135deg,#262831,#15161b);color:var(--mut)}
+.ph b{font:700 1.4rem "Space Grotesk",sans-serif;color:var(--am)}
+.ph small{font-size:.85rem}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));pointer-events:none}
+.cap .cat{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--am2)}
+.cap .ttl{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.play{position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;pointer-events:none}
+.play svg{width:18px;height:18px;fill:#fff}
+.empty{color:var(--mut);padding:30px 0}
+
+/* ---- Visor ---- */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.93);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;gap:12px}
+.lb-body{width:min(1100px,94vw)}
+.lb-body img{max-height:76vh;width:auto;max-width:100%;margin:0 auto;border-radius:12px}
+.lb-body iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+.lb-cap{color:var(--mut);text-align:center;margin:0;max-width:900px}
+.lb-x{all:unset;cursor:pointer;position:absolute;top:14px;right:14px;width:52px;height:52px;border-radius:50%;background:var(--am);color:#111;font:700 1.8rem/52px Inter,sans-serif;text-align:center}
+.lb-x:focus-visible{outline:3px solid #fff}
+
+/* ---- Niveles ---- */
+.levels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.lvl{position:relative;background:var(--gr2);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px;transition:opacity .6s,transform .6s,border-color .4s}
+.lvl .n{width:52px;height:52px;border-radius:50%;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 1.4rem "Space Grotesk",sans-serif;color:var(--mut);margin-bottom:16px;transition:all .5s}
+.lvl h3{font-size:1.25rem;margin-bottom:8px}
+.lvl p{margin:0;color:var(--mut);font-size:1rem}
+.js .lvl{opacity:.3;transform:translateY(22px)}
+.js .lvl.on{opacity:1;transform:none;border-color:var(--am)}
+.lvl.on .n{background:var(--am);border-color:var(--am);color:#111}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.js .rv.in{opacity:1;transform:none}
+
+/* ---- Formularios ---- */
+.panel{background:var(--gr2);border:1px solid var(--line);border-radius:24px;padding:clamp(20px,4vw,38px);max-width:760px}
+form{display:grid;gap:18px}
+label.l{display:block;font-weight:600;margin-bottom:6px}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;min-height:54px;padding:13px 16px;background:var(--bk);color:var(--wh);border:2px solid var(--line);border-radius:12px;font:400 1.05rem Inter,sans-serif}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--am)}
+.consent{display:flex;gap:14px;align-items:flex-start}
+.consent input{width:26px;height:26px;margin-top:3px;accent-color:var(--am);flex:none}
+.consent label{font-size:.98rem;color:var(--mut)}
+.note{font-size:.9rem;color:var(--mut);margin:0}
+.hp{position:absolute;left:-9999px;width:0;height:0;opacity:0;overflow:hidden}
+.msg{margin:0;font-weight:600;min-height:1.4em}
+.msg.bad{color:var(--bad)}
+.msg.ok{color:var(--ok)}
+.okbox{border:2px solid var(--ok);border-radius:14px;padding:16px;display:grid;gap:12px}
+.okbox p{margin:0}
+
+/* ---- Pie ---- */
+footer{border-top:1px solid var(--line);padding:48px 0 30px;background:var(--gr)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.fgrid h3{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--am);margin-bottom:8px}
+.fgrid p{margin:0;color:var(--mut)}
+.copy{margin-top:30px;color:var(--mut);font-size:.9rem}
+
+/* ---- Botones flotantes ---- */
+.fab{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(14,14,16,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+.fab-in{display:flex;gap:8px;max-width:640px;margin:0 auto}
+.fb{flex:1;min-height:58px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:14px;text-decoration:none;font-weight:700;font-size:1rem;color:#fff;background:var(--gr2);border:2px solid var(--line)}
+.fb svg{width:22px;height:22px;fill:currentColor;flex:none}
+.fb:hover{border-color:var(--am)}
+.fb.wa{background:#0f7d43;border-color:#0f7d43}
+.fb:focus-visible{outline:3px solid var(--am2);outline-offset:2px}
+
+/* ---- Celular ---- */
+@media (max-width:980px){.links{display:none}.levels{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.logo-card{max-width:340px;transform:none}}
+@media (max-width:560px){
+  body{font-size:17px}
+  section{padding:56px 0}
+  .hero{padding:36px 0 56px}
+  .lvl-badge{display:none}
+  .levels{grid-template-columns:1fr}
+  .logo-img{height:40px}
+  .wordmark b{font-size:1.2rem}
+  .btn{width:100%}
+  .fb{font-size:.92rem;gap:6px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .cap .ttl{font-size:.9rem}
+}
+@media (max-width:380px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.600 10.800a15.100 15.100 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25c1.100.37 2.300.57 3.600.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.600 21 3 13.400 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.300.2 2.500.57 3.600a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+</svg>
+
+<div class="xp" aria-hidden="true"><i id="xpBar"></i></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Gamboa General Construction">
+      <img id="logoImg" class="logo-img" src="https://drive.google.com/file/d/1C49zk8_8VOBhu1lFzNvaCOTQEpWC7cTM/view?usp=sharing" alt="Gamboa General Construction" hidden>
+      <span class="wordmark" id="wordmark"><b>GAMBOA</b><small>General Construction</small></span>
+    </a>
+    <nav class="links" aria-label="Menu">
+      <a href="#galeria" data-t="nav_gallery"></a>
+      <a href="#niveles" data-t="nav_levels"></a>
+      <a href="#visita" data-t="nav_visit"></a>
+      <a href="#contacto" data-t="nav_contact"></a>
+    </nav>
+    <span class="lvl-badge" id="lvlBadge" aria-hidden="true">LVL 1/5</span>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      <span class="sep" aria-hidden="true">|</span>
+      <button type="button" data-lang="es" aria-pressed="true">ES</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid solo" id="heroGrid">
+    <div>
+      <span class="kicker" data-t="hero_kicker"></span>
+      <h1 data-t="hero_titulo"></h1>
+      <p class="sub" data-t="hero_subtitulo"></p>
+      <div class="cta">
+        <a class="btn" href="#visita" data-t="boton_agendar"></a>
+        <a class="btn ghost" href="#galeria" data-t="boton_galeria"></a>
+      </div>
+      <div class="tags" id="heroTags"></div>
+    </div>
+    <div class="logo-card" id="heroLogo" hidden>
+      <img id="heroLogoImg" alt="Gamboa General Construction">
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-t="galeria_titulo"></h2>
+      <p data-t="galeria_sub"></p>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filtros"></div>
+    <p class="seen" id="seen" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- NIVELES -->
+<section class="alt" id="niveles">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-t="niveles_titulo"></h2>
+      <p data-t="niveles_sub"></p>
+    </div>
+    <div class="levels" id="levels">
+      <div class="lvl"><div class="n">1</div><h3 data-t="nivel_1"></h3><p data-t="nivel_1_desc"></p></div>
+      <div class="lvl"><div class="n">2</div><h3 data-t="nivel_2"></h3><p data-t="nivel_2_desc"></p></div>
+      <div class="lvl"><div class="n">3</div><h3 data-t="nivel_3"></h3><p data-t="nivel_3_desc"></p></div>
+      <div class="lvl"><div class="n">4</div><h3 data-t="nivel_4"></h3><p data-t="nivel_4_desc"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AGENDAR VISITA -->
+<section id="visita">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-t="visita_titulo"></h2>
+      <p data-t="visita_sub"></p>
+    </div>
+    <div class="panel rv">
+      <form id="formVisita" novalidate>
+        <div><label class="l" for="v_nombre" data-t="f_nombre"></label>
+          <input id="v_nombre" name="nombre" type="text" autocomplete="name" maxlength="100" minlength="2" required></div>
+        <div><label class="l" for="v_tel" data-t="f_tel"></label>
+          <input id="v_tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="25" required></div>
+        <div><label class="l" for="v_dir" data-t="f_dir"></label>
+          <input id="v_dir" name="direccion" type="text" autocomplete="street-address" maxlength="200" minlength="5" required></div>
+        <div><label class="l" for="v_desc" data-t="f_desc"></label>
+          <textarea id="v_desc" name="descripcion" maxlength="1000" minlength="5" data-tph="ph_desc" required></textarea></div>
+        <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="consent">
+          <input id="v_consent" name="consentimiento" type="checkbox" required>
+          <label for="v_consent" data-t="f_consent"></label>
+        </div>
+        <p class="note" data-priv="1"></p>
+        <button class="btn" type="submit" data-t="send_visit"></button>
+        <p class="msg" role="status" aria-live="polite"></p>
+        <div class="okbox" hidden>
+          <p data-t="ok_visit"></p>
+          <a class="btn wa" target="_blank" rel="noopener" data-t="continue_wa"></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="alt" id="contacto">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2 data-t="contacto_titulo"></h2>
+      <p data-t="contacto_sub"></p>
+    </div>
+    <div class="panel rv">
+      <form id="formContacto" novalidate>
+        <div><label class="l" for="c_nombre" data-t="f_nombre"></label>
+          <input id="c_nombre" name="nombre" type="text" autocomplete="name" maxlength="100" minlength="2" required></div>
+        <div><label class="l" for="c_tel" data-t="f_tel_opt"></label>
+          <input id="c_tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" maxlength="25"></div>
+        <div><label class="l" for="c_correo" data-t="f_correo"></label>
+          <input id="c_correo" name="correo" type="email" autocomplete="email" maxlength="120"></div>
+        <div><label class="l" for="c_msg" data-t="f_mensaje"></label>
+          <textarea id="c_msg" name="mensaje" maxlength="1500" minlength="5" required></textarea></div>
+        <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="consent">
+          <input id="c_consent" name="consentimiento" type="checkbox" required>
+          <label for="c_consent" data-t="f_consent"></label>
+        </div>
+        <p class="note" data-priv="1"></p>
+        <button class="btn" type="submit" data-t="send_contact"></button>
+        <p class="msg" role="status" aria-live="polite"></p>
+        <div class="okbox" hidden>
+          <p data-t="ok_contact"></p>
+          <a class="btn wa" target="_blank" rel="noopener" data-t="continue_wa"></a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h3 data-t="footer_addr"></h3><p id="fAddr"></p></div>
+      <div><h3 data-t="footer_hours"></h3><p id="fHours"></p></div>
+      <div><h3 data-t="footer_contact"></h3><p><a id="fTel" href="#"></a><br><a id="fMail" href="#"></a></p></div>
+    </div>
+    <p class="copy"><span id="fName"></span> &copy; <span id="fYear"></span>. <span data-t="rights"></span></p>
+  </div>
+</footer>
+
+<!-- Botones flotantes -->
+<div class="fab">
+  <div class="fab-in">
+    <a class="fb" id="fbDir" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-t="fb_dir"></span></a>
+    <a class="fb" id="fbTel"><svg aria-hidden="true"><use href="#i-tel"/></svg><span data-t="fb_tel"></span></a>
+    <a class="fb wa" id="fbWa" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+</div>
+
+<!-- Visor de fotos y videos -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" hidden>
+  <button class="lb-x" id="lbX" type="button" data-tal="close">&times;</button>
+  <div class="lb-body" id="lbBody"></div>
+  <p class="lb-cap" id="lbCap"></p>
+</div>
+
+<script>
+/* ============================================================
+   UNICO LUGAR QUE TU EDITAS: la URL de tu Apps Script.
+   Debe terminar en /exec
+   ============================================================ */
+// CAMBIA AQUÍ
+const API_URL = "https://script.google.com/macros/s/AKfycbxo_jMAmWmTCJZ4ywmgWDUfftMtuGnOf72Who4tUtBpQ7OFmU5ovPHyKbc8BgKiIk53/exec";
+
+/* ---------- Datos de respaldo (si el Sheet aun no responde) ---------- */
+const DEFAULT_CONFIG = {
+  nombre_empresa: "Gamboa General Construction",
+  ciudad: "Pittsburgh, PA 15216",
+  direccion: "1555 Broadway Ave 2nd Floor",
+  horario_es: "Lunes a Viernes, 8:00 AM - 5:00 PM",
+  horario_en: "Monday to Friday, 8:00 AM - 5:00 PM",
+  whatsapp: "14122047240",
+  correo: "info@gamboaconstruction.us",
+  logo_url: "https://drive.google.com/file/d/1C49zk8_8VOBhu1lFzNvaCOTQEpWC7cTM/view"
+};
+
+const CATS = ["interior","exterior","cocina","banos","alcobas","pisos","pintura","sotanos","terrazas"];
+
+const STR = {
+  es: {
+    page_title: "Gamboa General Construction | Remodelaciones en Pittsburgh, PA",
+    nav_gallery: "Galería", nav_levels: "Cómo trabajamos", nav_visit: "Agendar visita", nav_contact: "Contacto",
+    hero_kicker: "Remodelaciones de viviendas · Pittsburgh, PA",
+    hero_titulo: "[EJEMPLO – REEMPLAZAR] Tu hogar, a otro nivel",
+    hero_subtitulo: "[EJEMPLO – REEMPLAZAR] Remodelaciones en Pittsburgh y alrededores",
+    boton_agendar: "Agenda tu visita", boton_galeria: "Ver trabajos",
+    galeria_titulo: "[EJEMPLO – REEMPLAZAR] Nuestros trabajos",
+    galeria_sub: "Toca una foto o un video para verlo en grande.",
+    filter_all: "Todo",
+    cat_interior: "Interior", cat_exterior: "Exterior", cat_cocina: "Cocina", cat_banos: "Baños", cat_alcobas: "Alcobas",
+    cat_pisos: "Pisos", cat_pintura: "Pintura", cat_sotanos: "Sótanos", cat_terrazas: "Terrazas",
+    explored: "Has explorado {a} de {b} trabajos",
+    empty_gallery: "Pronto verás aquí nuestros trabajos.",
+    ph_label: "[EJEMPLO – REEMPLAZAR]",
+    niveles_titulo: "[EJEMPLO – REEMPLAZAR] Así trabajamos, nivel por nivel",
+    niveles_sub: "Avanza haciendo scroll y desbloquea cada etapa.",
+    nivel_1: "[EJEMPLO – REEMPLAZAR] Nivel 1: Visita", nivel_1_desc: "[EJEMPLO – REEMPLAZAR] Descripción breve de esta etapa.",
+    nivel_2: "[EJEMPLO – REEMPLAZAR] Nivel 2: Propuesta", nivel_2_desc: "[EJEMPLO – REEMPLAZAR] Descripción breve de esta etapa.",
+    nivel_3: "[EJEMPLO – REEMPLAZAR] Nivel 3: Obra", nivel_3_desc: "[EJEMPLO – REEMPLAZAR] Descripción breve de esta etapa.",
+    nivel_4: "[EJEMPLO – REEMPLAZAR] Nivel 4: Entrega", nivel_4_desc: "[EJEMPLO – REEMPLAZAR] Descripción breve de esta etapa.",
+    visita_titulo: "Agenda tu visita",
+    visita_sub: "Cuéntanos qué remodelación tienes en mente y coordinamos una visita a tu hogar.",
+    f_nombre: "Nombre completo", f_tel: "Teléfono / WhatsApp", f_tel_opt: "Teléfono / WhatsApp (opcional si dejas correo)",
+    f_dir: "Dirección de la obra", f_desc: "Describe brevemente tu proyecto",
+    ph_desc: "Ejemplo: quiero remodelar la cocina y cambiar el piso.",
+    f_correo: "Correo (opcional si dejas teléfono)", f_mensaje: "Mensaje",
+    f_consent: "Autorizo el tratamiento de mis datos personales para que me contacten sobre mi proyecto, conforme a la Ley 1581 de 2012 (habeas data, Colombia).",
+    privacy_note: "Tus datos se usan solo para responder tu solicitud. Puedes pedir consultarlos, corregirlos o eliminarlos escribiendo a {mail}.",
+    send_visit: "Enviar solicitud", send_contact: "Enviar mensaje", sending: "Enviando…",
+    ok_visit: "¡Listo! Recibimos tu solicitud. Te contactaremos pronto.",
+    ok_contact: "¡Gracias! Recibimos tu mensaje. Te responderemos pronto.",
+    continue_wa: "Continuar por WhatsApp",
+    contacto_titulo: "Escríbenos", contacto_sub: "¿Tienes preguntas? Déjanos tu mensaje.",
+    footer_addr: "Dirección", footer_hours: "Horario", footer_contact: "Contacto", rights: "Todos los derechos reservados.",
+    fb_dir: "Dirección", fb_tel: "Teléfono", close: "Cerrar",
+    wa_hello: "Hola, quiero información sobre una remodelación.",
+    wa_visit: "Hola, soy {n}. Quiero agendar una visita para mi proyecto.\nDirección: {d}\nProyecto: {p}",
+    wa_contact: "Hola, soy {n}. {m}",
+    err_nombre_invalido: "Revisa tu nombre.", err_telefono_invalido: "Revisa tu teléfono.",
+    err_direccion_invalida: "Revisa la dirección.", err_descripcion_invalida: "Describe un poco más tu proyecto.",
+    err_correo_invalido: "Revisa tu correo.", err_contacto_requerido: "Deja un teléfono o un correo.",
+    err_mensaje_invalido: "Escribe un mensaje un poco más largo.",
+    err_consentimiento_requerido: "Debes aceptar el tratamiento de datos.",
+    err_demasiadas_solicitudes: "Demasiadas solicitudes. Intenta más tarde.",
+    err_ocupado: "El sistema está ocupado. Intenta de nuevo.",
+    err_sin_conexion: "No pudimos conectar. Escríbenos por WhatsApp.",
+    err_generic: "Algo salió mal. Intenta de nuevo o escríbenos por WhatsApp."
+  },
+  en: {
+    page_title: "Gamboa General Construction | Home Remodeling in Pittsburgh, PA",
+    nav_gallery: "Gallery", nav_levels: "How we work", nav_visit: "Book a visit", nav_contact: "Contact",
+    hero_kicker: "Home remodeling · Pittsburgh, PA",
+    hero_titulo: "[EJEMPLO – REEMPLAZAR] Your home, leveled up",
+    hero_subtitulo: "[EJEMPLO – REEMPLAZAR] Remodeling in Pittsburgh and surrounding areas",
+    boton_agendar: "Book your visit", boton_galeria: "See our work",
+    galeria_titulo: "[EJEMPLO – REEMPLAZAR] Our work",
+    galeria_sub: "Tap a photo or video to see it larger.",
+    filter_all: "All",
+    cat_interior: "Interior", cat_exterior: "Exterior", cat_cocina: "Kitchen", cat_banos: "Bathrooms", cat_alcobas: "Bedrooms",
+    cat_pisos: "Flooring", cat_pintura: "Painting", cat_sotanos: "Basements", cat_terrazas: "Decks & Patios",
+    explored: "You have explored {a} of {b} projects",
+    empty_gallery: "Our work will appear here soon.",
+    ph_label: "[EJEMPLO – REEMPLAZAR]",
+    niveles_titulo: "[EJEMPLO – REEMPLAZAR] How we work, level by level",
+    niveles_sub: "Scroll down to unlock each stage.",
+    nivel_1: "[EJEMPLO – REEMPLAZAR] Level 1: Visit", nivel_1_desc: "[EJEMPLO – REEMPLAZAR] Short description of this stage.",
+    nivel_2: "[EJEMPLO – REEMPLAZAR] Level 2: Proposal", nivel_2_desc: "[EJEMPLO – REEMPLAZAR] Short description of this stage.",
+    nivel_3: "[EJEMPLO – REEMPLAZAR] Level 3: Construction", nivel_3_desc: "[EJEMPLO – REEMPLAZAR] Short description of this stage.",
+    nivel_4: "[EJEMPLO – REEMPLAZAR] Level 4: Handover", nivel_4_desc: "[EJEMPLO – REEMPLAZAR] Short description of this stage.",
+    visita_titulo: "Book your visit",
+    visita_sub: "Tell us about the remodel you have in mind and we will schedule a visit to your home.",
+    f_nombre: "Full name", f_tel: "Phone / WhatsApp", f_tel_opt: "Phone / WhatsApp (optional if you leave an email)",
+    f_dir: "Project address", f_desc: "Briefly describe your project",
+    ph_desc: "Example: I want to remodel my kitchen and replace the floor.",
+    f_correo: "Email (optional if you leave a phone)", f_mensaje: "Message",
+    f_consent: "I authorize the processing of my personal data so that you may contact me about my project, in accordance with Law 1581 of 2012 (habeas data, Colombia).",
+    privacy_note: "Your data is used only to answer your request. You may ask to view, correct or delete it by writing to {mail}.",
+    send_visit: "Send request", send_contact: "Send message", sending: "Sending…",
+    ok_visit: "Done! We received your request. We will contact you soon.",
+    ok_contact: "Thank you! We received your message. We will reply soon.",
+    continue_wa: "Continue on WhatsApp",
+    contacto_titulo: "Write to us", contacto_sub: "Have questions? Leave us a message.",
+    footer_addr: "Address", footer_hours: "Hours", footer_contact: "Contact", rights: "All rights reserved.",
+    fb_dir: "Address", fb_tel: "Phone", close: "Close",
+    wa_hello: "Hello, I would like information about a remodel.",
+    wa_visit: "Hello, I am {n}. I would like to book a visit for my project.\nAddress: {d}\nProject: {p}",
+    wa_contact: "Hello, I am {n}. {m}",
+    err_nombre_invalido: "Please check your name.", err_telefono_invalido: "Please check your phone.",
+    err_direccion_invalida: "Please check the address.", err_descripcion_invalida: "Please describe your project a bit more.",
+    err_correo_invalido: "Please check your email.", err_contacto_requerido: "Leave a phone or an email.",
+    err_mensaje_invalido: "Please write a slightly longer message.",
+    err_consentimiento_requerido: "You must accept the data processing notice.",
+    err_demasiadas_solicitudes: "Too many requests. Please try later.",
+    err_ocupado: "The system is busy. Please try again.",
+    err_sin_conexion: "We could not connect. Please write to us on WhatsApp.",
+    err_generic: "Something went wrong. Try again or write to us on WhatsApp."
+  }
+};
+
+/* ---------- Estado ---------- */
+let LANG = "es", CONTENT = {}, CONFIG = Object.assign({}, DEFAULT_CONFIG);
+let GALLERY = [], FILTER = "all", PLACEHOLDERS = false, vidIO = null, lastFocus = null;
+const SEEN = new Set();
+
+/* ---------- Utilidades ---------- */
+function $(s, r){ return (r || document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function t(k){
+  const c = CONTENT[k];
+  if (c && c[LANG]) return c[LANG];
+  const s = STR[LANG][k];
+  return s === undefined ? "" : s;
+}
+function digits(s){ return String(s || "").replace(/\D/g, ""); }
+function driveId(u){
+  const s = String(u || "").trim();
+  const m = s.match(/\/d\/([\w-]{10,})/) || s.match(/[?&]id=([\w-]{10,})/);
+  if (m) return m[1];
+  return /^[\w-]{25,}$/.test(s) ? s : "";
+}
+function safeImg(u){ return /^https:\/\//i.test(String(u || "")); }
+function safeVideo(u){ return /^https:\/\/www\.youtube-nocookie\.com\/embed\/[\w-]{11}\?/.test(String(u || "")); }
+function apiReady(){ return typeof API_URL === "string" && /^https:\/\/script\.google\.com\/.+\/exec$/.test(API_URL); }
+function fmtPhone(w){
+  const d = digits(w);
+  if (d.length === 11 && d.charAt(0) === "1") return "+1 (" + d.slice(1,4) + ") " + d.slice(4,7) + "-" + d.slice(7);
+  return "+" + d;
+}
+function el(tag, cls, txt){
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (txt !== undefined) e.textContent = txt;
+  return e;
+}
+
+/* ---------- Idioma y textos ---------- */
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.title = t("page_title");
+  $$("[data-t]").forEach(function(n){ n.textContent = t(n.dataset.t); });
+  $$("[data-tph]").forEach(function(n){ n.placeholder = t(n.dataset.tph); });
+  $$("[data-tal]").forEach(function(n){ n.setAttribute("aria-label", t(n.dataset.tal)); });
+  $$(".lang button").forEach(function(b){
+    const on = b.dataset.lang === LANG;
+    b.classList.toggle("on", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+  renderInfo(); renderTags(); renderChips(); renderGallery(); updateSeen();
+}
+
+function renderInfo(){
+  const wa = digits(CONFIG.whatsapp), mail = CONFIG.correo;
+  const full = CONFIG.direccion + ", " + CONFIG.ciudad;
+  $("#fbDir").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(full);
+  $("#fbTel").href = "tel:+" + wa;
+  $("#fbWa").href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(t("wa_hello"));
+  $("#fAddr").textContent = full;
+  $("#fHours").textContent = CONFIG["horario_" + LANG] || CONFIG.horario_es;
+  const ft = $("#fTel"); ft.textContent = fmtPhone(wa); ft.href = "tel:+" + wa;
+  const fm = $("#fMail"); fm.textContent = mail; fm.href = "mailto:" + mail;
+  $("#fName").textContent = CONFIG.nombre_empresa;
+  $("#fYear").textContent = new Date().getFullYear();
+  $$("[data-priv]").forEach(function(n){ n.textContent = t("privacy_note").replace("{mail}", mail); });
+  setLogo();
+}
+
+let logoSet = "";
+function setLogo(){
+  const u = String(CONFIG.logo_url || "").trim();
+  if (!u || u === logoSet) return;
+  let src = "";
+  const id = driveId(u);
+  if (id) src = "https://drive.google.com/file/d/1C49zk8_8VOBhu1lFzNvaCOTQEpWC7cTM/view?usp=sharing" + id + "&sz=w800";
+  else if (safeImg(u)) src = u;
+  if (!src) return;
+  logoSet = u;
+  const hi = $("#logoImg"), ho = $("#heroLogoImg");
+  hi.onload = function(){ hi.hidden = false; $("#wordmark").hidden = true; };
+  ho.onload = function(){ $("#heroLogo").hidden = false; $("#heroGrid").classList.remove("solo"); };
+  hi.src = src; ho.src = src;
+}
+
+function renderTags(){
+  const box = $("#heroTags"); box.textContent = "";
+  CATS.forEach(function(c){ box.appendChild(el("span", "", t("cat_" + c))); });
+}
+
+/* ---------- Galeria ---------- */
+function placeholders(){
+  return CATS.map(function(c, i){
+    return { id: "p" + i, categoria: c, tipo: "imagen", src: "", thumb: "", titulo_es: "", titulo_en: "", alt_es: "", alt_en: "" };
+  });
+}
+
+function renderChips(){
+  const box = $("#chips"); box.textContent = "";
+  const cats = PLACEHOLDERS ? CATS : CATS.filter(function(c){ return GALLERY.some(function(g){ return g.categoria === c; }); });
+  if (FILTER !== "all" && cats.indexOf(FILTER) < 0) FILTER = "all";
+  [["all", t("filter_all")]].concat(cats.map(function(c){ return [c, t("cat_" + c)]; })).forEach(function(p){
+    const b = el("button", "chip" + (p[0] === FILTER ? " on" : ""), p[1]);
+    b.type = "button";
+    b.setAttribute("aria-pressed", p[0] === FILTER ? "true" : "false");
+    b.addEventListener("click", function(){ FILTER = p[0]; renderChips(); renderGallery(); });
+    box.appendChild(b);
+  });
+}
+
+function makePlaceholder(g){
+  const d = el("div", "ph");
+  d.appendChild(el("b", "", t("cat_" + g.categoria)));
+  d.appendChild(el("small", "", t("ph_label")));
+  return d;
+}
+
+function makeIframe(src, title){
+  const f = document.createElement("iframe");
+  f.src = src; f.title = title || "Video";
+  f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+  f.referrerPolicy = "strict-origin-when-cross-origin";
+  f.setAttribute("allowfullscreen", "");
+  return f;
+}
+
+function buildCard(g){
+  const c = el("div", "card");
+  c.tabIndex = 0; c.setAttribute("role", "button");
+  const title = g["titulo_" + LANG] || "";
+  const alt = g["alt_" + LANG] || title || t("cat_" + g.categoria);
+  c.setAttribute("aria-label", title || t("cat_" + g.categoria));
+  const media = el("div", "media"); c.appendChild(media);
+
+  const isVideo = g.tipo === "video" && safeVideo(g.src);
+  if (isVideo){
+    if (safeImg(g.thumb)){ const im = el("img"); im.src = g.thumb; im.alt = alt; im.loading = "lazy"; media.appendChild(im); }
+    else media.appendChild(makePlaceholder(g));
+    const vb = el("div", "vbox"); c.appendChild(vb);
+    c.dataset.video = "1"; c._src = g.src; c._title = title;
+    const pl = el("div", "play"); pl.innerHTML = '<svg aria-hidden="true"><use href="#i-play"/></svg>'; c.appendChild(pl);
+  } else if (g.tipo !== "video" && safeImg(g.thumb)){
+    const im = el("img"); im.src = g.thumb; im.alt = alt; im.loading = "lazy"; im.referrerPolicy = "no-referrer";
+    im.onerror = function(){ media.textContent = ""; media.appendChild(makePlaceholder(g)); };
+    media.appendChild(im);
+  } else {
+    media.appendChild(makePlaceholder(g));
+  }
+
+  const cap = el("div", "cap");
+  cap.appendChild(el("span", "cat", t("cat_" + g.categoria)));
+  if (title) cap.appendChild(el("span", "ttl", title));
+  c.appendChild(cap);
+
+  c.addEventListener("click", function(){ openItem(g, c); });
+  c.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " "){ e.preventDefault(); openItem(g, c); } });
+  return c;
+}
+
+function renderGallery(){
+  const grid = $("#grid"); grid.textContent = "";
+  const list = GALLERY.filter(function(g){ return FILTER === "all" || g.categoria === FILTER; });
+  if (!list.length){ grid.appendChild(el("p", "empty", t("empty_gallery"))); return; }
+  list.forEach(function(g){ grid.appendChild(buildCard(g)); });
+  observeVideos();
+}
+
+function observeVideos(){
+  if (vidIO) vidIO.disconnect();
+  if (!("IntersectionObserver" in window)) return;
+  vidIO = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      const box = e.target.querySelector(".vbox");
+      if (!box) return;
+      const has = box.querySelector("iframe");
+      if (e.isIntersecting && !has){ const f = makeIframe(e.target._src, e.target._title); f.tabIndex = -1; box.appendChild(f); }
+      else if (!e.isIntersecting && has){ has.remove(); }
+    });
+  }, { threshold: 0.6 });
+  $$('.card[data-video="1"]').forEach(function(c){ vidIO.observe(c); });
+}
+
+function updateSeen(){
+  const p = $("#seen");
+  if (PLACEHOLDERS || !GALLERY.length){ p.textContent = ""; return; }
+  p.textContent = t("explored").replace("{a}", SEEN.size).replace("{b}", GALLERY.length);
+}
+
+/* ---------- Visor ---------- */
+function openItem(g, card){
+  SEEN.add(String(g.id)); updateSeen();
+  const body = $("#lbBody"); body.textContent = "";
+  const title = g["titulo_" + LANG] || "";
+  const alt = g["alt_" + LANG] || title || t("cat_" + g.categoria);
+  if (g.tipo === "video" && safeVideo(g.src)){
+    body.appendChild(makeIframe(g.src, title));
+  } else if (g.tipo !== "video" && safeImg(g.src)){
+    const im = el("img"); im.src = g.src; im.alt = alt; body.appendChild(im);
+  } else {
+    const ph = makePlaceholder(g); ph.style.position = "static"; ph.style.minHeight = "40vh"; ph.style.borderRadius = "12px"; body.appendChild(ph);
+  }
+  $("#lbCap").textContent = title;
+  lastFocus = card || document.activeElement;
+  $("#lb").hidden = false;
+  $("#lbX").focus();
+}
+function closeItem(){
+  $("#lb").hidden = true; $("#lbBody").textContent = "";
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+
+/* ---------- Formularios ---------- */
+async function post(data){
+  if (!apiReady()) return { ok: false, error: "sin_conexion" };
+  const ctl = new AbortController();
+  const to = setTimeout(function(){ ctl.abort(); }, 25000);
+  try {
+    const r = await fetch(API_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data), signal: ctl.signal });
+    return await r.json();
+  } catch (e) {
+    return { ok: false, error: "sin_conexion" };
+  } finally { clearTimeout(to); }
+}
+
+function errMsg(code){ return t("err_" + code) || t("err_generic"); }
+
+function bindForm(id, build, waText){
+  const f = $(id), msg = $(".msg", f), btn = $("button[type=submit]", f), ok = $(".okbox", f);
+  f.addEventListener("input", function(){ ok.hidden = true; });
+  f.addEventListener("submit", async function(ev){
+    ev.preventDefault();
+    if (!f.reportValidity()) return;
+    msg.className = "msg"; msg.textContent = ""; ok.hidden = true;
+    btn.disabled = true; btn.textContent = t("sending");
+    const data = build(f);
+    const res = await post(data);
+    btn.disabled = false; btn.textContent = t(btn.dataset.t);
+    if (res && res.ok){
+      $("a", ok).href = "https://wa.me/" + digits(CONFIG.whatsapp) + "?text=" + encodeURIComponent(waText(data));
+      ok.hidden = false; f.reset();
+    } else {
+      msg.className = "msg bad"; msg.textContent = errMsg(res && res.error);
+    }
+  });
+}
+
+function val(f, n){ return f.elements[n].value.trim(); }
+
+/* ---------- Progreso y niveles ---------- */
+const SECS = ["inicio", "galeria", "niveles", "visita", "contacto"];
+function onScroll(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - window.innerHeight;
+  const p = max > 0 ? Math.min(100, Math.round(window.scrollY / max * 100)) : 0;
+  $("#xpBar").style.width = p + "%";
+  let lvl = 1;
+  SECS.forEach(function(id, i){
+    const s = document.getElementById(id);
+    if (s && s.getBoundingClientRect().top < window.innerHeight * 0.45) lvl = i + 1;
+  });
+  $("#lvlBadge").textContent = "LVL " + lvl + "/" + SECS.length + " · " + p + " XP";
+}
+
+function setupReveal(){
+  document.documentElement.classList.add("js");
+  if (!("IntersectionObserver" in window)){
+    $$(".rv").forEach(function(n){ n.classList.add("in"); });
+    $$(".lvl").forEach(function(n){ n.classList.add("on"); });
+    return;
+  }
+  const io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  $$(".rv").forEach(function(n){ io.observe(n); });
+  const lv = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add("on"); lv.unobserve(e.target); } });
+  }, { threshold: 0.35 });
+  $$(".lvl").forEach(function(n, i){ n.style.transitionDelay = (i * 0.12) + "s"; lv.observe(n); });
+}
+
+/* ---------- Carga de datos ---------- */
+async function loadData(){
+  if (apiReady()){
+    try {
+      const ctl = new AbortController();
+      const to = setTimeout(function(){ ctl.abort(); }, 20000);
+      const r = await fetch(API_URL + "?action=bootstrap", { signal: ctl.signal });
+      clearTimeout(to);
+      const d = await r.json();
+      if (d && d.ok){
+        CONTENT = d.content || {};
+        const cf = d.config || {};
+        Object.keys(cf).forEach(function(k){ if (String(cf[k]).trim() !== "") CONFIG[k] = cf[k]; });
+        GALLERY = (d.gallery || []).filter(function(g){ return CATS.indexOf(g.categoria) >= 0; });
+      }
+    } catch (e) { /* se usan datos de respaldo */ }
+  }
+  PLACEHOLDERS = !GALLERY.length;
+  if (PLACEHOLDERS) GALLERY = placeholders();
+  applyLang();
+}
+
+/* ---------- Inicio ---------- */
+function init(){
+  try { const s = localStorage.getItem("gamboa_lang"); if (s === "en" || s === "es") LANG = s; else LANG = (navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es"; }
+  catch (e) { LANG = (navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es"; }
+
+  $$(".lang button").forEach(function(b){
+    b.addEventListener("click", function(){
+      LANG = b.dataset.lang;
+      try { localStorage.setItem("gamboa_lang", LANG); } catch (e) {}
+      applyLang();
+    });
+  });
+
+  $("#lbX").addEventListener("click", closeItem);
+  $("#lb").addEventListener("click", function(e){ if (e.target === this) closeItem(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !$("#lb").hidden) closeItem(); });
+
+  bindForm("#formVisita", function(f){
+    return { action: "visita", nombre: val(f, "nombre"), telefono: val(f, "telefono"), direccion: val(f, "direccion"),
+      descripcion: val(f, "descripcion"), idioma: LANG, consentimiento: f.elements.consentimiento.checked, website: val(f, "website") };
+  }, function(d){ return t("wa_visit").replace("{n}", d.nombre).replace("{d}", d.direccion).replace("{p}", d.descripcion); });
+
+  bindForm("#formContacto", function(f){
+    return { action: "contacto", nombre: val(f, "nombre"), telefono: val(f, "telefono"), correo: val(f, "correo"),
+      mensaje: val(f, "mensaje"), idioma: LANG, consentimiento: f.elements.consentimiento.checked, website: val(f, "website") };
+  }, function(d){ return t("wa_contact").replace("{n}", d.nombre).replace("{m}", d.mensaje); });
+
+  setupReveal();
+  window.addEventListener("scroll", function(){ window.requestAnimationFrame(onScroll); }, { passive: true });
+  window.addEventListener("resize", onScroll);
+
+  PLACEHOLDERS = true; GALLERY = placeholders();
+  applyLang();
+  onScroll();
+  loadData();
+}
+document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
